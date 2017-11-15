@@ -1,6 +1,9 @@
-- if !display_link
+- if display_link == true
     h2
       = link_to product.name, product_path(product)
 - else
     h2
       = product.name
+    p
+      = product.description
+      = product.price

@@ -1,2 +1,1 @@
-h1 Product#index
-p Find me in app/views/product/index.html.slim
+= render partial: 'product', collection: @products, locals: {display_link: true}
