@@ -1,0 +1,6 @@
+- if !display_link
+    h2
+      = link_to product.name, product_path(product)
+- else
+    h2
+      = product.name

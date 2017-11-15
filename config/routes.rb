@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'product/index'
+  get 'product/', to: 'product#index', as: 'products'
 
-  get 'product/show'
+  get 'product/:number', to: 'product#show', as: 'product'
 
-  get 'index/show'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
