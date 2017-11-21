@@ -59,3 +59,4 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'slim-rails'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem "kaminari"
