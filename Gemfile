@@ -55,5 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gems that are for the project
 gem 'devise'
-gem 'activeadmin', github: 'activeadmin' 
-gem 'slim-rails' 
+gem 'activeadmin', github: 'activeadmin'
+gem 'slim-rails'
+gem 'bootstrap-sass', '~> 3.3.7'
