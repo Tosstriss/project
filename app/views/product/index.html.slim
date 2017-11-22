@@ -1,2 +1,9 @@
+h2 Product Search
+p
+  = form_tag search_results_path
+  = text_field_tag :keywords
+  = submit_tag 'Search'
+  
 = render partial: 'product', collection: @products, locals: {display_link: true}
+
 = paginate @products

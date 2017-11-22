@@ -6,4 +6,13 @@ class ProductController < ApplicationController
   def show
   	@product = Product.find(params[:number].to_i)
   end
+
+  def search
+
+  end
+
+  def search_results
+    @wildcard = '%' + params[:keywords] + '%'
+    @products = Product.where("name LIKE ?", @wildcard)
+  end
 end

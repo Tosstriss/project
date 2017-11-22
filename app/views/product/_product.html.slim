@@ -1,8 +1,10 @@
 
-
 - if display_link == true
+
     h2
-      = link_to product.name, product_path(product)
+      = link_to product.image, product_path(product)
+    p
+      = product.name
 - else
     h2
       = product.name
