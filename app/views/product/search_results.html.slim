@@ -1,6 +1,6 @@
 h2 Search Results
 
-- if @products.empty
-  p Sorry your search for '%param[:keywords]' has return no results
-  end
-= render @products
+- if @products.size.zero?
+    p Sorry your search for '%param[:keywords]' has return no results
+- else
+  = render partial: 'product', collection: @products, locals: {display_link: true}
