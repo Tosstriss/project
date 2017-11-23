@@ -1,4 +1,4 @@
-ActiveAdmin.register Pages do
+ActiveAdmin.register Page do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -11,5 +11,5 @@ ActiveAdmin.register Pages do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
+permit_params :title, :content
 end
