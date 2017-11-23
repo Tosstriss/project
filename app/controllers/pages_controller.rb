@@ -3,10 +3,10 @@ class PagesController < ApplicationController
   end
 
   def about
-    @about = Page.where("title = 'about us'")
+    @about = Page.where(title: 'About').first
   end
 
   def contact
-    @contact = Page.where("title = 'contact'")
+    @contact = Page.where(title: 'Contact').first
   end
 end
