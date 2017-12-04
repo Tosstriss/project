@@ -1,9 +1,7 @@
 = render partial: 'common/menu.html.slim'
-h2 Product Search
-p
-= form_tag search_results_path, method: :get do
-  = text_field_tag :keywords
-  = submit_tag 'Search'
+= render partial: 'nav.html.slim'
+
+
 
 = render partial: 'product', collection: @products, locals: {display_link: true}
 

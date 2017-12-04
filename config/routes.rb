@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'product/', to: 'product#index', as: 'products'
   get 'product/:number', to: 'product#show', as: 'product'
 
-  get 'search', to: 'product#search', as: 'search'
   get 'search_results', to: 'product#search_results', as: 'search_results'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

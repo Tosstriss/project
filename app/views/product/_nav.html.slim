@@ -1,0 +1,9 @@
+h2 Product Search
+p
+
+
+= form_tag search_results_path, method: :get do
+  = select_tag :category, options_for_select(@category.map {|c| [c.name, c.id]} << ["All", ''], params[:category])
+  = text_field_tag :keywords
+  = submit_tag 'Search'
+  
