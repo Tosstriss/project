@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171123140534) do
+ActiveRecord::Schema.define(version: 20171205191838) do
+
+  create_table "Customers", force: :cascade do |t|
+    t.string "name"
+    t.string "province"
+    t.string "postalcode"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "address"
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -49,15 +59,6 @@ ActiveRecord::Schema.define(version: 20171123140534) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "customers", force: :cascade do |t|
-    t.string "name"
-    t.string "country"
-    t.string "postalcode"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "orders", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -84,6 +85,14 @@ ActiveRecord::Schema.define(version: 20171123140534) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.index ["category_id"], name: "index_products_on_category_id"
+  end
+
+  create_table "provinces", force: :cascade do |t|
+    t.string "name"
+    t.decimal "pst"
+    t.decimal "gst"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

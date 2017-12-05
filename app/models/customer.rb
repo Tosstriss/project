@@ -1,3 +1,3 @@
 class Customer < ApplicationRecord
-	validates :name, :country, :postalcode, :email, presence: true
+	validates :name, :address, :province, :postalcode, :email,  presence: true
 end
