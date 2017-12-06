@@ -4,7 +4,7 @@ ActiveAdmin.register Province do
 #
 # permit_params :list, :of, :attributes, :on, :model
 #
-# or
+# or  
 #
 # permit_params do
 #   permitted = [:permitted, :attributes]
