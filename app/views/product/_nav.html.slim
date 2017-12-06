@@ -4,6 +4,10 @@ p
 
 = form_tag search_results_path, method: :get do
   = select_tag :status, options_for_select([["All",''],["Current", 'Current'], ["New", 'New'], ["On Sale", 'On Sale']], params[:status])
-  = select_tag :category, options_for_select(@category.map {|c| [c.name, c.id]} << ["All", ''] , params[:category])
   = text_field_tag :keywords
   = submit_tag 'Search'
+p
+
+= form_tag category_search_path, method: :get do
+  = select_tag :category, options_for_select(@category.map {|c| [c.name, c.id]} << ["All", ''] , params[:category])
+  = submit_tag 'Category Search'

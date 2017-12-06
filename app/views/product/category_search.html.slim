@@ -1,0 +1,12 @@
+= render partial: 'common/menu.html.slim'
+= render partial: 'nav.html.slim'
+
+h2 Category Search
+
+- if @products.size.zero?
+    p Sorry there is no category
+- else
+  = render partial: 'product', collection: @products, locals: {display_link: true}
+
+
+= paginate @products
