@@ -1,16 +1,17 @@
 
-- if display_link == true
-
-    h2
-      = link_to image_tag(product.image.url(:large)), product_path(product)
-    p
-      = product.name
-- else
-    h2
-      = product.name
-    p
-      = link_to image_tag(product.image.url(:large)), product_path(product)
-    p
-      = product.description
-    p
-      = product.price
+  - if display_link == true
+      .product_wrapper
+        h2
+          = link_to image_tag(product.image.url(:large)), product_path(product)
+        p
+          = product.name
+  - else
+      .product_wrapper
+        h2
+          = product.name
+        p
+          = link_to image_tag(product.image.url(:large)), product_path(product)
+        p
+          = product.description
+        p
+          = product.price

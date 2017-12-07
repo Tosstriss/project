@@ -2,7 +2,7 @@
 = render partial: 'nav.html.slim'
 
 
-
-= render partial: 'product', collection: @products, locals: {display_link: true}
+.product_container
+  = render partial: 'product', collection: @products, locals: {display_link: true}
 
 = paginate @products
