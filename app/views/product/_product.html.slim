@@ -3,8 +3,21 @@
       .product_wrapper
         h2
           = link_to image_tag(product.image.url(:large)), product_path(product)
-        p
-          = product.name
+        .product_short_desc
+          p
+            = product.name
+          p
+            = product.price
+
+        - if product.status == "On Sale"
+          .sale_product_tag
+            = product.status
+        - elsif product.status == "New"
+          .new_product_tag
+            = product.status
+        - else
+
+
   - else
       .product_wrapper
         h2

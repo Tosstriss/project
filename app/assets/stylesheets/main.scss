@@ -1,22 +1,42 @@
 $bg-primary: rgb(70,70,70);
 $bg-light: rgb(121,113,113);
 
-$f-primary: rgb(153,64,0);
+$f-light: rgb(153,64,0);
+$f-primary: rgb(90,38,0);
 
 $sale: rgb(255,0,0);
 $new: rgb(0,255,0);
+
+@mixin opacity($opacity){
+  -webkit-filter: opacity($opacity);
+  filter:opacity($opacity);
+  filter:alpha(opacity=$opacity);
+}
 
 html{
   margin: 0px auto;
 }
 
-h2{
+h1, h2{
   color: $f-primary;
+}
+p{
+  color:$f-light;
+}
+
+a, a:link,a:visited,a:active{
+  color:$f-primary;
+  text-decoration: none;
+}
+
+a:hover{
+  color: $f-light;
 }
 
 body{
   margin: 0px auto;
   background-color: $bg-primary;
+  text-align: center;
 }
 
 
@@ -24,15 +44,14 @@ nav {
   margin: 0px auto;
   text-align: center;
   background-color: $bg-light;
-  ul {
-    margin: 5%;
-    padding: 5%;
+  ol {
     list-style: none;
   }
 
   li {
      display: inline-block;
      color:$f-primary;
+     font-size: 12px + 2px;
     }
 
     a{
@@ -43,15 +62,38 @@ nav {
 .product_container{
   width: 100%;
   height: 4%;
-  background-color: brown;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
+
   .product_wrapper{
+    position: relative;
     display: inline;
     padding: 0.5%;
+    .product_short_desc{
+      background-color: $bg-light;
+    }
   }
     h2{
       text-align: center;
+      margin-bottom: -6%;
     }
+
+    .new_product_tag{
+      @include opacity(.8);
+      z-index:1;
+      width: 70px;
+      height: 20px;
+      background-color: $new;
+      color: white;
+      position: absolute;
+      top:9.1%;
+      left:53%;
+    }
+
+    .sale_product_tag{
+      @extend .new_product_tag;
+      background-color: $sale;
+      color:black;
+    }
+}
