@@ -22,6 +22,7 @@ h1, h2{
 }
 p{
   color:$f-light;
+  font-size: 14px;
 }
 
 a, a:link,a:visited,a:active{
@@ -96,4 +97,28 @@ nav {
       background-color: $sale;
       color:black;
     }
+}
+.pagination{
+  margin: 0px auto;
+  background-color: $bg-primary;
+  float:none;
+}
+.search_container{
+  margin: 0px auto;
+  width: 40%;
+  .keyword_search{
+    text-align: left;
+    input#keywords{
+      width: inherit;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+      margin-bottom: 1%;
+    }
+  }
+  .category_search{
+    text-align: left;
+    input{
+      margin-left: 0.5%;
+    }
+  }
 }
