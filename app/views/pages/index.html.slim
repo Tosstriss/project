@@ -1,4 +1,9 @@
 = render partial: 'common/menu.html.slim'
 
 h1 Welcome to SVER.GG
-p Find me in app/views/pages/index.html.slim
+p
+  = link_to image_tag('About Image.png'),  about_path
+p
+  = link_to image_tag('Contact Image.png'),  contact_path
+p
+  = link_to image_tag('Store Image.png'),  products_path
