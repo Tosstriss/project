@@ -98,11 +98,13 @@ nav {
       color:black;
     }
 }
+
 .pagination{
   margin: 0px auto;
   background-color: $bg-primary;
   float:none;
 }
+
 .search_container{
   margin: 0px auto;
   width: 40%;
@@ -120,5 +122,19 @@ nav {
     input{
       margin-left: 0.5%;
     }
+  }
+}
+
+.single_product_container{
+  margin: 0px auto;
+  width: 40%;
+  a{
+    float:left;
+    margin-right: 5%;
+  }
+  .single_product_text{
+    display: relative;
+    text-align: left;
+    margin-left: 5%;
   }
 }
